@@ -6,9 +6,17 @@ pipeline {
             steps {
                 script {
                     echo 'Running tests...'
-                    bat 'dotnet test PreparingForQualificationProject.sln'  // Запуск тестов для всего решения
+                    bat 'dotnet test PreparingForQualificationProject.sln'
+                }
+            }
+        }
+
+        stage('Report') {
+            steps {
+                script {
+                    echo 'Generating report...'
+                    bat 'allure generate allure-results -o allure-report --clean'
                 }
             }
         }
     }
-}
