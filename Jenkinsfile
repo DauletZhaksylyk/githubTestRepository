@@ -1,6 +1,10 @@
 pipeline {
     agent any 
 
+    tools {
+        jdk 'java'
+    }
+
     stages {
         stage('Test') {
             steps {
@@ -14,8 +18,11 @@ pipeline {
         stage('Report') {
             steps {
                 script {
-                    echo 'Generating report...'
-                    bat 'allure generate allure-results -o allure-report --clean'
+                    allure([
+                    includeProperties: false,
+                    jdk: '',
+                    results: [[path: 'allure-results']]
+                ])
                 }
             }
         }
