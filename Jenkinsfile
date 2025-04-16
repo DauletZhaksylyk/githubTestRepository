@@ -1,10 +1,6 @@
 pipeline {
     agent any 
 
-    tools {
-        jdk 'java'
-    }
-
     stages {
         stage('Test') {
             steps {
@@ -20,7 +16,6 @@ pipeline {
                 script {
                     allure([
                     includeProperties: false,
-                    jdk: '',
                     results: [[path: 'PreparingForQualificationProject/bin/Debug/net8.0/allure-results']]
                 ])
                 }
