@@ -1,10 +1,6 @@
 pipeline {
     agent any 
 
-    environment {
-        ALLURE_RESULTS_DIR = 'C:/Users/d.zhaksylyk/source/repos/githubTestRepository/PreparingForQualificationProject/bin/Debug/net8.0'
-    }
-
     stages {
         stage('Test') {
             steps {
