@@ -21,7 +21,7 @@ pipeline {
                     allure([
                     includeProperties: false,
                     jdk: '',
-                    results: [[path: 'allure-results']]
+                    results: [[path: 'PreparingForQualificationProject/bin/Debug/net8.0/allure-results']]
                 ])
                 }
             }
