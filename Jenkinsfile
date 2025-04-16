@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     echo 'Running tests...'
-                    sh 'dotnet test PreparingForQualificationProject.sln'  // Запуск тестов для всего решения
+                    bat 'dotnet test PreparingForQualificationProject.sln'  // Запуск тестов для всего решения
                 }
             }
         }
