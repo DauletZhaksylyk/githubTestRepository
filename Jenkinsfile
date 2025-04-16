@@ -1,5 +1,5 @@
 pipeline {
-    agent any  // Используем доступный агент
+    agent any 
 
     stages {
         stage('Test') {
