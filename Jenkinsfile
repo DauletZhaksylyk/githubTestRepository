@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                     echo 'Generating report...'
-                    bat 'allure generate %ALLURE_RESULTS_DIR% --clean'
+                    bat 'allure generate %ALLURE_RESULTS_DIR% -o allure-report --clean'
                 }
             }
         }
