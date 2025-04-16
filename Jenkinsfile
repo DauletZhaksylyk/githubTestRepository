@@ -1,6 +1,10 @@
 pipeline {
     agent any 
 
+    environment {
+        ALLURE_RESULTS_DIR = 'C:/Users/d.zhaksylyk/source/repos/githubTestRepository/PreparingForQualificationProject/bin/Debug/net8.0'
+    }
+
     stages {
         stage('Test') {
             steps {
@@ -15,7 +19,7 @@ pipeline {
             steps {
                 script {
                     echo 'Generating report...'
-                    bat 'allure generate allure-results -o allure-report --clean'
+                    bat 'allure generate %ALLURE_RESULTS_DIR% -o allure-report --clean'
                 }
             }
         }
