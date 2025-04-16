@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     echo 'Generating report...'
-                    bat 'allure generate --clean'
+                    bat 'allure generate allure-results -o allure-report --clean'
                 }
             }
         }

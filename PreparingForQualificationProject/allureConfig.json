@@ -1,0 +1,9 @@
+{
+    "allure": {
+        "directory": "bin/Debug/net8.0/allure-results",
+        "links": [
+            "https://example.org/{issue}",
+            "https://example.org/{tms}"
+        ]
+    }
+}
